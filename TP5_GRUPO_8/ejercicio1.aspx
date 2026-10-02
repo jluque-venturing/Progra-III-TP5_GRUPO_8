@@ -9,13 +9,16 @@
         .auto-style1 {
             width: 100%;
         }
+
         .auto-style2 {
             height: 23px;
         }
+
         .auto-style3 {
             height: 23px;
             width: 269px;
         }
+
         .auto-style4 {
             height: 23px;
             width: 288px;
@@ -38,9 +41,49 @@
                     </td>
                 </tr>
             </table>
-        </div>
-    </form>
+
             <h1>GRUPO N°</h1>
             <h2>Agregar Sucursal</h2>
-        </body>
+
+            <table>
+                <tr>
+                    <td>Nombre Sucursal:</td>
+                    <td>
+                        <asp:TextBox ID="txtNombreSucursal" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Descripción:</td>
+                    <td>
+                        <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Provincia:</td>
+                    <td>
+                        <asp:DropDownList ID="ddlProvincia" runat="server"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dirección:</td>
+                    <td>
+                        <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" OnClick="btnAceptar_Click" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <asp:Label ID="lblMensaje" runat="server" Text=""></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
 </html>
