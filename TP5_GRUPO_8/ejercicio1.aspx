@@ -30,15 +30,23 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style3">
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ejercicio1.aspx">Agregar Sucursal</asp:HyperLink>
+                    <td></td>
+                    <td>
+                        <center>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ejercicio1.aspx">Agregar Sucursal</asp:HyperLink>
+                        </center>
                     </td>
-                    <td class="auto-style4">
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ejercicio2.aspx">Listado de Sucursales</asp:HyperLink>
+                    <td>
+                        <center>
+                            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/ejercicio2.aspx">Listado de Sucursales</asp:HyperLink>
+                        </center>
                     </td>
-                    <td class="auto-style2">
-                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ejercicio3.aspx">Eliminar Sucursal</asp:HyperLink>
+                    <td>
+                        <center>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ejercicio3.aspx">Eliminar Sucursal</asp:HyperLink>
+                        </center>
                     </td>
+                    <td></td>
                 </tr>
             </table>
 
