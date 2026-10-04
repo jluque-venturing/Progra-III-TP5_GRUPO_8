@@ -13,18 +13,23 @@
             width: 56%;
         }
 
-        .auto-style3 {
-            height: 23px;
-            width: 269px;
+        #form1 {
+            height: 313px;
         }
-
-        .auto-style4 {
-            height: 23px;
-            width: 288px;
+        .auto-style5 {
+            width: 100%;
+            height: 32px;
         }
-    
-        .auto-style2 {
-            height: 23px;
+        .auto-style6 {
+            height: 26px;
+        }
+        .auto-style8 {
+            height: 26px;
+            width: 180px;
+        }
+        .auto-style9 {
+            height: 26px;
+            width: 172px;
         }
 
         </style>
@@ -56,6 +61,17 @@
 
             <h1>Eliminar Sucursal</h1>
         </div>
+        <table class="auto-style5">
+            <tr>
+                <td class="auto-style9">
+                    <asp:Label ID="Label1" runat="server" Font-Size="15pt" Text="Ingresar ID sucursal:"></asp:Label>
+                </td>
+                <td class="auto-style8">
+                    <asp:TextBox ID="txtIdSucursal" runat="server" Width="156px"></asp:TextBox>
+                </td>
+                <td class="auto-style6"></td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
