@@ -11,7 +11,7 @@ namespace TP5_GRUPO_8
     {
 
 
-        // Codigo para guardar la consulta a la base de datos. 
+        // Consulta SQL para obtener la información de las sucursales
         private const string consultaSucursales = @"
     SELECT
         s.Id_Sucursal,

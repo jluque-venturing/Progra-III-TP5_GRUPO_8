@@ -1,14 +1,12 @@
-﻿
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ejercicio3.aspx.cs" Inherits="TP5_GRUPO_8.ejercicio3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ejercicio3.aspx.cs" Inherits="TP5_GRUPO_8.ejercicio3" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title> Eliminar Sucursal </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Eliminar Sucursal</title>
     <style type="text/css">
-
         .auto-style1 {
             width: 56%;
         }
@@ -16,23 +14,26 @@
         #form1 {
             height: 313px;
         }
+
         .auto-style5 {
             width: 100%;
             height: 32px;
         }
+
         .auto-style6 {
             height: 26px;
         }
+
         .auto-style8 {
             height: 26px;
             width: 180px;
         }
+
         .auto-style9 {
             height: 26px;
             width: 172px;
         }
-
-        </style>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -61,6 +62,7 @@
 
             <h1>Eliminar Sucursal</h1>
         </div>
+
         <table class="auto-style5">
             <tr>
                 <td class="auto-style9">
@@ -73,7 +75,14 @@
                     <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" />
                 </td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="lblMensaje" runat="server" Text="" ForeColor="Red"></asp:Label>
+                </td>
+            </tr>
         </table>
+
+        
     </form>
 </body>
 </html>
