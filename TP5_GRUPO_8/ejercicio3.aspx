@@ -69,7 +69,9 @@
                 <td class="auto-style8">
                     <asp:TextBox ID="txtIdSucursal" runat="server" Width="156px"></asp:TextBox>
                 </td>
-                <td class="auto-style6"></td>
+                <td class="auto-style6">
+                    <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" />
+                </td>
             </tr>
         </table>
     </form>

@@ -52,6 +52,11 @@
 
         <div>
             <asp:Label ID="Label1" runat="server" Text="Listado de sucursales"></asp:Label>
+            <br />
+            <asp:Label ID="Label2" runat="server" Text="Búsqueda ingrese Id sucursal:"></asp:Label>
+            <asp:TextBox ID="txtIdSucursal" runat="server"></asp:TextBox>
+            <asp:Button ID="btnFiltrar" runat="server" OnClick="btnFiltrar_Click" Text="Filtrar" />
+            <asp:Button ID="btnMostrarTodos" runat="server" OnClick="btnMostrarTodos_Click" Text="Mostrar todos" />
         </div>
     </form>
 </body>
