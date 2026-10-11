@@ -11,6 +11,7 @@ namespace TP5_GRUPO_8
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if (!IsPostBack)
             {
             }
@@ -18,6 +19,12 @@ namespace TP5_GRUPO_8
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+            {
+
+                return;
+            }
+
         }
 
         private void MostrarMensaje(int filasAfectadas)

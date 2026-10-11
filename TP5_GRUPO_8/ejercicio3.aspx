@@ -24,14 +24,32 @@
             height: 26px;
         }
 
-        .auto-style8 {
-            height: 26px;
-            width: 180px;
-        }
-
         .auto-style9 {
             height: 26px;
             width: 172px;
+        }
+
+        .auto-style10 {
+            width: 231%;
+        }
+
+        .auto-style11 {
+            width: 168px;
+            height: 23px;
+        }
+
+        .auto-style12 {
+            height: 26px;
+            width: 167px;
+        }
+
+        .auto-style13 {
+            height: 23px;
+        }
+
+        .auto-style14 {
+            height: 23px;
+            width: 341px;
         }
     </style>
 </head>
@@ -68,7 +86,7 @@
                 <td class="auto-style9">
                     <asp:Label ID="Label1" runat="server" Font-Size="15pt" Text="Ingresar ID sucursal:"></asp:Label>
                 </td>
-                <td class="auto-style8">
+                <td class="auto-style12">
                     <asp:TextBox ID="txtIdSucursal" runat="server" Width="156px"></asp:TextBox>
                 </td>
                 <td class="auto-style6">
@@ -77,12 +95,41 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <asp:Label ID="lblMensaje" runat="server" Text="" ForeColor="Red"></asp:Label>
+                    <table class="auto-style10">
+                        <tr>
+                            <td class="auto-style11">&nbsp;</td>
+                            <td class="auto-style14">
+                                <asp:ValidationSummary
+                                    ID="vsErrores"
+                                    runat="server"
+                                    ForeColor="Red"
+                                    DisplayMode="SingleParagraph" />
+                            </td>
+                            <td class="auto-style13">
+                                <asp:RequiredFieldValidator
+                                    ID="rfvIdSucursal"
+                                    runat="server"
+                                    ControlToValidate="txtIdSucursal"
+                                    ErrorMessage="Debe ingresar un ID de sucursal"
+                                    Display="None">
+                                </asp:RequiredFieldValidator>
+
+                                <asp:RegularExpressionValidator
+                                    ID="revIdSucursal"
+                                    runat="server"
+                                    ControlToValidate="txtIdSucursal"
+                                    ValidationExpression="^\d+$"
+                                    ErrorMessage="Debe ingresar un número"
+                                    Display="None">
+                                </asp:RegularExpressionValidator>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
 
-        
+
     </form>
 </body>
 </html>
