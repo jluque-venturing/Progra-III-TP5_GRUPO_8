@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -28,6 +29,19 @@ namespace TP5_GRUPO_8
 
 
             return filasAfectadas;
+        }
+        public DataTable ObtenerTabla(string consulta)
+        {
+            SqlConnection conexion = new SqlConnection(
+                "Data Source=.;Initial Catalog=Neptuno;Integrated Security=True");
+
+            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+
+            DataTable tabla = new DataTable();
+
+            adaptador.Fill(tabla);
+
+            return tabla;
         }
     }
 }
