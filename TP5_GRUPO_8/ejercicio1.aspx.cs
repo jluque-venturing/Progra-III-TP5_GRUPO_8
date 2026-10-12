@@ -32,9 +32,15 @@ namespace TP5_GRUPO_8
         {
             if (!Page.IsValid)
             {
-
                 return;
             }
+            string consulta = "INSERT INTO Sucursal (NombreSucursal, DescripcionSucursal, Id_ProvinciaSucursal, DireccionSucursal) VALUES ('"
+                            + txtNombreSucursal.Text + "', '"
+                            + txtDescripcion.Text + "', "
+                            + ddlProvincia.SelectedValue + ", '"
+                            + txtDireccion.Text + "')";
+
+            int filasAfectadas = new Conexion().EjecutarTransaccion(consulta);
         }
     }
 }
