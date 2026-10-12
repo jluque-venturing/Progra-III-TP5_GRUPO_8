@@ -33,7 +33,7 @@ namespace TP5_GRUPO_8
         {
             if (!IsPostBack)
             {
-
+                CargarGrilla(consultaSucursales);
             }
         }
 
@@ -46,5 +46,12 @@ namespace TP5_GRUPO_8
         {
 
         }
+
+        private void CargarGrilla(string consulta)
+        {
+            gvSucursales.DataSource = new Conexion().ObtenerTabla(consulta);
+            gvSucursales.DataBind();
+        }
+
     }
 }

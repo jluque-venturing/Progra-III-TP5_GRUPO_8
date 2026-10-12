@@ -32,8 +32,7 @@ namespace TP5_GRUPO_8
         }
         public DataTable ObtenerTabla(string consulta)
         {
-            SqlConnection conexion = new SqlConnection(
-                "Data Source=.;Initial Catalog=Neptuno;Integrated Security=True");
+            SqlConnection conexion = new SqlConnection(conexionBDSucursales);
 
             SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
 

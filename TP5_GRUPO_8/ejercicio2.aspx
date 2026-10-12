@@ -57,6 +57,9 @@
             <asp:TextBox ID="txtIdSucursal" runat="server"></asp:TextBox>
             <asp:Button ID="btnFiltrar" runat="server" OnClick="btnFiltrar_Click" Text="Filtrar" />
             <asp:Button ID="btnMostrarTodos" runat="server" OnClick="btnMostrarTodos_Click" Text="Mostrar todos" />
+            <br />
+            <asp:GridView ID="gvSucursales" runat="server">
+            </asp:GridView>
         </div>
     </form>
 </body>
