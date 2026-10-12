@@ -31,8 +31,8 @@ namespace TP5_GRUPO_8
 
             MostrarMensaje(filasAfectadas);
 
-            txtIdSucursal.Text = "";
-
+           
+            LimpiarCampos();
         }
 
         private void MostrarMensaje(int filasAfectadas)
@@ -47,5 +47,12 @@ namespace TP5_GRUPO_8
                 lblMensajeEliminacion.Text = "No existe una sucursal con ese ID";
             }
         }
+    
+
+    private void LimpiarCampos()
+        {
+            txtIdSucursal.Text = string.Empty;
+        }
+
     }
 }
