@@ -37,7 +37,11 @@ namespace TP5_GRUPO_8
 
         private void MostrarMensaje(int filasAfectadas)
         {
+            if (filasAfectadas == 1)
+            {
+                lblMensajeEliminacion.Text = "La sucursal se ha eliminado con exito";
 
+            }
         }
     }
 }

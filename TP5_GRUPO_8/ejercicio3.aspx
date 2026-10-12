@@ -97,7 +97,9 @@
                 <td colspan="2">
                     <table class="auto-style10">
                         <tr>
-                            <td class="auto-style11">&nbsp;</td>
+                            <td class="auto-style11">
+                                <asp:Label ID="lblMensajeEliminacion" runat="server" Text=""></asp:Label>
+                            </td>
                             <td class="auto-style14">
                                 <asp:ValidationSummary
                                     ID="vsErrores"
