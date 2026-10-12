@@ -60,6 +60,31 @@
             <br />
             <asp:GridView ID="gvSucursales" runat="server">
             </asp:GridView>
+            <td class="auto-style14">
+                <asp:ValidationSummary
+                    ID="vsErrores"
+                    runat="server"
+                    ForeColor="Red"
+                    DisplayMode="SingleParagraph" />
+            </td>
+            <td class="auto-style13">
+                <asp:RequiredFieldValidator
+                    ID="rfvIdSucursal2"
+                    runat="server"
+                    ControlToValidate="txtIdSucursal"
+                    ErrorMessage="Debe ingresar un ID de sucursal"
+                    Display="None">
+                </asp:RequiredFieldValidator>
+
+                <asp:RegularExpressionValidator
+                    ID="revIdSucursal2"
+                    runat="server"
+                    ControlToValidate="txtIdSucursal"
+                    ValidationExpression="^\d+$"
+                    ErrorMessage="Debe ingresar un número"
+                    Display="None">
+                </asp:RegularExpressionValidator>
+            </td>
         </div>
     </form>
 </body>
