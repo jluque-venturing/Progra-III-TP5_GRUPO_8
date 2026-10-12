@@ -45,8 +45,14 @@ namespace TP5_GRUPO_8
             }
 
         }
+          if (!string.IsNullOrWhiteSpace(txtIdSucursal.Text))
+            {
+                string consultaFiltrada = consultaSucursales + " WHERE s.Id_Sucursal = " + txtIdSucursal.Text;
+        CargarGrilla(consultaFiltrada);
+    }
+}
 
-        protected void btnMostrarTodos_Click(object sender, EventArgs e)
+protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
 
         }
