@@ -42,6 +42,9 @@ namespace TP5_GRUPO_8
 
             int filasAfectadas = new Conexion().EjecutarTransaccion(consulta);
 
+
+            MostrarMensaje(filasAfectadas);
+
             if (filasAfectadas == 1)
             {
                 LimpiarCampos();
@@ -54,6 +57,17 @@ namespace TP5_GRUPO_8
             txtDescripcion.Text = string.Empty;
             txtDireccion.Text = string.Empty;
             ddlProvincia.SelectedIndex = 0;
+        }
+        private void MostrarMensaje(int filasAfectadas)
+        {
+            if (filasAfectadas == 1)
+            {
+                lblMensaje.Text = "Sucursal agregada correctamente.";
+            }
+            else
+            {
+                lblMensaje.Text = "No se pudo agregar al agregar la sucursal.";
+            }
         }
     }
 }
