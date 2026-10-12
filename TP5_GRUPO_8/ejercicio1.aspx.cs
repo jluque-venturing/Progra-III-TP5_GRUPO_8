@@ -41,6 +41,19 @@ namespace TP5_GRUPO_8
                             + txtDireccion.Text + "')";
 
             int filasAfectadas = new Conexion().EjecutarTransaccion(consulta);
+
+            if (filasAfectadas == 1)
+            {
+                LimpiarCampos();
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombreSucursal.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            ddlProvincia.SelectedIndex = 0;
         }
     }
 }

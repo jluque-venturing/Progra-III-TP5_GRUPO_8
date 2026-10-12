@@ -31,6 +31,7 @@ namespace TP5_GRUPO_8
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if (!IsPostBack)
             {
                 CargarGrilla(consultaSucursales);
@@ -54,7 +55,7 @@ namespace TP5_GRUPO_8
 
 protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-
+            CargarGrilla(consultaSucursales);
         }
 
         private void CargarGrilla(string consulta)
