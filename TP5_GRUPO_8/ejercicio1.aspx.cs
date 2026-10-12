@@ -13,7 +13,17 @@ namespace TP5_GRUPO_8
         {
             if (!IsPostBack)
             {
+                Conexion conexion = new Conexion();
 
+                
+                ddlProvincia.DataSource = conexion.ObtenerTabla("SELECT Id_Provincia, DescripcionProvincia FROM Provincia");
+
+                ddlProvincia.DataTextField = "DescripcionProvincia";
+                ddlProvincia.DataValueField = "Id_Provincia";
+
+                ddlProvincia.DataBind();
+
+                ddlProvincia.Items.Insert(0, new ListItem("--Seleccionar--", "0"));
             }
         }
 

@@ -21,9 +21,17 @@ namespace TP5_GRUPO_8
         {
             if (!Page.IsValid)
             {
-
                 return;
             }
+
+            string consulta = "DELETE FROM Sucursal WHERE Id_Sucursal = " + txtIdSucursal.Text;
+
+            Conexion conexion = new Conexion();
+            int filasAfectadas = conexion.EjecutarTransaccion(consulta);
+
+            MostrarMensaje(filasAfectadas);
+
+            txtIdSucursal.Text = "";
 
         }
 
