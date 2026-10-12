@@ -11,11 +11,12 @@ namespace TP5_GRUPO_8
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
             if (!IsPostBack)
             {
                 Conexion conexion = new Conexion();
 
-                
+
                 ddlProvincia.DataSource = conexion.ObtenerTabla("SELECT Id_Provincia, DescripcionProvincia FROM Provincia");
 
                 ddlProvincia.DataTextField = "DescripcionProvincia";
@@ -29,7 +30,11 @@ namespace TP5_GRUPO_8
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (!Page.IsValid)
+            {
 
+                return;
+            }
         }
     }
 }

@@ -10,18 +10,8 @@
             width: 100%;
         }
 
-        .auto-style2 {
-            height: 23px;
-        }
-
-        .auto-style3 {
-            height: 23px;
-            width: 269px;
-        }
-
-        .auto-style4 {
-            height: 23px;
-            width: 288px;
+        .auto-style5 {
+            width: 135px;
         }
     </style>
 </head>
@@ -59,11 +49,21 @@
                     <td>
                         <asp:TextBox ID="txtNombreSucursal" runat="server"></asp:TextBox>
                     </td>
+                    <td class="auto-style5">
+                        
+                        <asp:RequiredFieldValidator ID="rfvTxtNombreSucursal" runat="server" ErrorMessage="Ingrese un nombre de sucursal" ControlToValidate="txtNombreSucursal" ForeColor="Red"></asp:RequiredFieldValidator>
+                        
+                    </td>
                 </tr>
                 <tr>
                     <td>Descripción:</td>
                     <td>
                         <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style5">
+
+                        <asp:RequiredFieldValidator ID="rfvTxtDescripcion" runat="server" ErrorMessage="Ingrese una descripcion" ControlToValidate="txtDescripcion" ForeColor="Red"></asp:RequiredFieldValidator>
+
                     </td>
                 </tr>
                 <tr>
@@ -71,11 +71,21 @@
                     <td>
                         <asp:DropDownList ID="ddlProvincia" runat="server"></asp:DropDownList>
                     </td>
+                    <td>
+
+                        <asp:RequiredFieldValidator ID="rfvDdlProvincia" runat="server" ControlToValidate="ddlProvincia" ErrorMessage="Seleccione una provincia" ForeColor="Red" InitialValue="&quot;--Seleccionar--&quot;"></asp:RequiredFieldValidator>
+
+                    </td>
                 </tr>
                 <tr>
                     <td>Dirección:</td>
                     <td>
                         <asp:TextBox ID="txtDireccion" runat="server"></asp:TextBox>
+                    </td>
+                    <td class="auto-style5">
+
+                        <asp:RequiredFieldValidator ID="rfvTxtDireccion" runat="server" ErrorMessage="Ingrese una direccion" ControlToValidate="txtDireccion" ForeColor="Red"></asp:RequiredFieldValidator>
+
                     </td>
                 </tr>
                 <tr>
