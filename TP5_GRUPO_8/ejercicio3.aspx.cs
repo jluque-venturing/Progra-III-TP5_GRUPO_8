@@ -42,6 +42,10 @@ namespace TP5_GRUPO_8
                 lblMensajeEliminacion.Text = "La sucursal se ha eliminado con exito";
 
             }
+            else
+            {
+                lblMensajeEliminacion.Text = "No existe una sucursal con ese ID";
+            }
         }
     }
 }
