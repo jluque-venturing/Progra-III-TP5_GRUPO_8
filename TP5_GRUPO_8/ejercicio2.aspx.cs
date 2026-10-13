@@ -38,18 +38,26 @@ namespace TP5_GRUPO_8
             }
         }
 
+        private void LimpiarCampos()
+        {
+            txtIdSucursal.Text = string.Empty;
+
+        }
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
             if (!Page.IsValid)
             {
                 return;
             }
-
+            string consultaFiltrada = consultaSucursales + " WHERE s.Id_Sucursal = " + txtIdSucursal.Text;
+            CargarGrilla(consultaFiltrada);
+            LimpiarCampos();
         }
 
         protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             CargarGrilla(consultaSucursales);
+            LimpiarCampos();
         }
 
         private void CargarGrilla(string consulta)
@@ -57,6 +65,8 @@ namespace TP5_GRUPO_8
             gvSucursales.DataSource = new Conexion().ObtenerTabla(consulta);
             gvSucursales.DataBind();
         }
+
+       
 
     }
 }
