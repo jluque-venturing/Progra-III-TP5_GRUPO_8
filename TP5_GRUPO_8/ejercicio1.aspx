@@ -73,7 +73,7 @@
                     </td>
                     <td>
 
-                        <asp:RequiredFieldValidator ID="rfvDdlProvincia" runat="server" ControlToValidate="ddlProvincia" ErrorMessage="Seleccione una provincia" ForeColor="Red" InitialValue="&quot;--Seleccionar--&quot;"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvDdlProvincia" runat="server" ControlToValidate="ddlProvincia" ErrorMessage="Seleccione una provincia" ForeColor="Red" InitialValue="0"></asp:RequiredFieldValidator>
 
                     </td>
                 </tr>
